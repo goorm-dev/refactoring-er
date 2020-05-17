@@ -1,2 +1,5 @@
-description('createComponent', () => {
+describe('createComponent', () => {
+	test('default', () => {
+		expect(true).toEqual(true);
+	});
 });
