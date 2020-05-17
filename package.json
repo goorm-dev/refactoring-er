@@ -13,11 +13,12 @@
 		"lint:jest": "eslint -c ./.eslintrc.jest.js --ext test.js ./src/",
 		"lint:node:watch": "onchange 'src/**/*.js' -- eslint --ext js,json {{changed}}",
 		"lint:jest:watch": "onchange 'src/**/*.test.js' -- eslint -c ./.eslintrc.jest.js --ext test.js {{changed}}",
-		"prettier:watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}"
+		"prettier:watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
+		"release": "standard-version"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://lkh5510:2@Erlfls@github.com/goorm-dev/refactoring-er.git"
+		"url": "https://github.com/goorm-dev/refactoring-er.git"
 	},
 	"author": "",
 	"license": "ISC",
@@ -44,6 +45,7 @@
 		"jest-extended": "^0.11.5",
 		"lint-staged": "^10.2.2",
 		"onchange": "^7.0.2",
-		"prettier": "^2.0.5"
+		"prettier": "^2.0.5",
+		"standard-version": "^8.0.0"
 	}
 }
