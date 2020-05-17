@@ -1,0 +1,22 @@
+{
+  "name": "refactoring-er",
+  "version": "1.0.0",
+  "description": "Reactoring Tool in goorm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lkh5510:2@Erlfls@github.com/goorm-dev/refactoring-er.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goorm-dev/refactoring-er/issues"
+  },
+  "homepage": "https://github.com/goorm-dev/refactoring-er#readme",
+  "dependencies": {
+    "commander": "^5.1.0"
+  }
+}
