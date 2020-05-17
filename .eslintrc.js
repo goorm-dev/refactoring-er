@@ -1,8 +1,9 @@
 module.exports = {
 	env: {
-		node: true,
+		node: true
 	},
 	extends: ['eslint:recommended', 'airbnb/base', 'prettier'],
+	ignorePatterns: ['*.test.js', 'src/test/**'],
 	rules: {
 		indent: [
 			2,
@@ -10,8 +11,8 @@ module.exports = {
 			{
 				ignoredNodes: ['ConditionalExpression *'],
 				SwitchCase: 1,
-				ObjectExpression: 'off',
-			},
+				ObjectExpression: 'off'
+			}
 		],
 		'no-tabs': 0,
 		'no-underscore-dangle': 0,
@@ -30,6 +31,6 @@ module.exports = {
 		'react/destructuring-assignment': 0,
 		'no-underscore-dangle': 0,
 		'new-cap': 0,
-		'camelcase': 0,
-	},
+		camelcase: 0
+	}
 };

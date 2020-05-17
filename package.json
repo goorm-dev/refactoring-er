@@ -4,13 +4,14 @@
 	"description": "Reactoring Tool in goorm",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest",
+		"test": "jest --coverage",
+		"test:report": "http-server ./reports/coverage",
 		"dev": "concurrently \"npm run lint:watch\" \"npm run prettier:watch\"",
 		"lint": "npm run lint:node && npm run lint:jest",
 		"lint:watch": "concurrently \"npm run lint:node:watch\" \"npm run lint:jest:watch\"",
-		"lint:node": "eslint --ignore-pattern '*.test.js' --ext js,json ./src/",
+		"lint:node": "eslint --ext js,json ./src/",
 		"lint:jest": "eslint -c ./.eslintrc.jest.js --ext test.js ./src/",
-		"lint:node:watch": "onchange 'src/**/*.js' -- eslint --ignore-pattern '*.test.js' --ext js,json {{changed}}",
+		"lint:node:watch": "onchange 'src/**/*.js' -- eslint --ext js,json {{changed}}",
 		"lint:jest:watch": "onchange 'src/**/*.test.js' -- eslint -c ./.eslintrc.jest.js --ext test.js {{changed}}",
 		"prettier:watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}"
 	},
@@ -37,8 +38,10 @@
 		"eslint-plugin-import": "^2.20.2",
 		"eslint-plugin-jest": "^23.13.0",
 		"eslint-plugin-prettier": "^3.1.3",
+		"http-server": "^0.12.3",
 		"husky": "^4.2.5",
 		"jest": "^26.0.1",
+		"jest-extended": "^0.11.5",
 		"lint-staged": "^10.2.2",
 		"onchange": "^7.0.2",
 		"prettier": "^2.0.5"

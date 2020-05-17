@@ -1,6 +1,6 @@
 const linter = {
 	node: filenames =>
-		`eslint --ignore-pattern '*.test.js' --ext js,json ${filenames.join(
+		`eslint --ext js,json ${filenames.join(
 			' '
 		)}`,
 	jest: filenames =>

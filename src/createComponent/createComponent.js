@@ -34,7 +34,7 @@ const COMPONENT_ENTITIES = [
 	},
 ]
 
-module.exports = async (dirpath, { withStory }) => {
+module.exports = async dirpath => {
 	const cwd = process.cwd();
 	const dirAbsPath = path.resolve(cwd, dirpath);
 	const componentName = path.basename(dirAbsPath);
