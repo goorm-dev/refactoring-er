@@ -13,7 +13,7 @@ module.exports = {
 	coverageDirectory: '<rootDir>/reports/coverage',
 	coverageThreshold: {
 		global: {
-			statements: 80,
+			statements: 75,
 		}
 	}
 };
