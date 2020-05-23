@@ -7,6 +7,10 @@ const TEMPLATES = {
 	STYLE: path.join(__dirname, './data/style.scss'),
 };
 
+let scssExtension = '.scss';
+
+const getScssFileName = (name) => `${name}.${scssExtension}`;
+
 const COMPONENT_ENTITIES = [
 	{
 		filename: () => 'index.jsx',
@@ -21,11 +25,14 @@ const COMPONENT_ENTITIES = [
 		required: () => true,
 		content: async ({ name }) => {
 			const buf = await fs.readFile(TEMPLATES.COMPONENT);
-			return buf.toString().replace(/\$\{name\}/g, name);
+			return buf
+				.toString()
+				.replace(/\$\{name\}/g, name)
+				.replace(/\$\{scssPath\}/g, getScssFileName(name));
 		},
 	},
 	{
-		filename: ({ name }) => `${name}.scss`,
+		filename: ({ name }) => getScssFileName(name),
 		required: () => true,
 		content: async ({ name }) => {
 			const buf = await fs.readFile(TEMPLATES.STYLE);
@@ -34,12 +41,20 @@ const COMPONENT_ENTITIES = [
 	},
 ];
 
-module.exports = async (dirpath) => {
+const setScssExtension = (scssExt) => {
+	if (scssExt) {
+		scssExtension = scssExt;
+	}
+};
+
+module.exports = async (dirpath, { scssExt } = {}) => {
 	const cwd = process.cwd();
 	const dirAbsPath = path.resolve(cwd, dirpath);
 	const componentName = path.basename(dirAbsPath);
 
 	await fs.mkdirp(dirAbsPath);
+
+	setScssExtension(scssExt);
 
 	await Promise.all(
 		COMPONENT_ENTITIES.map(async (en) => {
