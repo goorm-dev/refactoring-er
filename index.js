@@ -2,14 +2,16 @@
 
 const path = require('path');
 const fs = require('fs');
-const appRoot = require('app-root-path');
 const { program } = require('commander');
+const { cosmiconfigSync } = require('cosmiconfig');
 
 const pkg = require('./package.json');
 
 const getConf = () => {
-	const confPath = appRoot + '.refactoring_er.config.js';
-	return fs.existsSync(confPath) ? require(confPath) : {};
+	const explorer = cosmiconfigSync('refactoring_er');
+	const { config = {} } = explorer.search() || {}
+	console.log({ config });
+	return { ...config };
 };
 
 const conf = getConf();
