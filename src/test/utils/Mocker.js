@@ -25,6 +25,11 @@ class Mocker {
 		this.mock = this.spy.mockRejectedValue(...args);
 		return this;
 	}
+
+	mockImplementation(...args) {
+		this.mock = this.spy.mockImplementation(...args);
+		return this;
+	}
 }
 
 module.exports = Mocker;
