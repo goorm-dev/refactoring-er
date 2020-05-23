@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.2.0 (2020-05-23)
+
+
+### Features
+
+* **index.js:** src/*/cmd.js 자동 require 하도록 수정 ([543d27c](https://github.com/goorm-dev/refactoring-er/commit/543d27c5f4ef763c9b879d06c4ffdb6d9c826da3))
+
 ## 1.1.0 (2020-05-17)
 
 
