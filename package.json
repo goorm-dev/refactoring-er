@@ -1,6 +1,6 @@
 {
 	"name": "refactoring-er",
-	"version": "1.3.2",
+	"version": "1.3.3",
 	"description": "Reactoring Tool in goorm",
 	"main": "index.js",
 	"bin": {
