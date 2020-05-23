@@ -14,7 +14,7 @@ module.exports = {
 }
 ```
 
-## commanders
+## Commanders
 
 ### createComponent
 ```shell
