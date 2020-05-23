@@ -9,8 +9,10 @@ const pkg = require('./package.json');
 
 const getConf = () => {
 	const explorer = cosmiconfigSync('refactoring_er');
-	const { config = {} } = explorer.search() || {}
-	console.log({ config });
+	const { config = {} } = explorer.search() || {
+		scssExt: 'scss',
+		storiesPath: './src/stories'
+	};
 	return { ...config };
 };
 
