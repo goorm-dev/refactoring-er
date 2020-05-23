@@ -28,5 +28,3 @@ srcs.forEach(s => {
 
 
 program.parse(process.argv);
-
-
