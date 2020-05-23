@@ -1,6 +1,6 @@
 {
 	"name": "refactoring-er",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Reactoring Tool in goorm",
 	"main": "index.js",
 	"bin": {
@@ -15,8 +15,7 @@
 		"lint:node": "eslint --ext js,json ./src/",
 		"lint:jest": "eslint -c ./.eslintrc.jest.js --ext test.js ./src/",
 		"lint:node:watch": "onchange 'src/**/*.js' -- eslint --ext js,json {{changed}}",
-		"lint:jest:watch":
-			"onchange 'src/**/*.test.js' -- eslint -c ./.eslintrc.jest.js --ext test.js {{changed}}",
+		"lint:jest:watch": "onchange 'src/**/*.test.js' -- eslint -c ./.eslintrc.jest.js --ext test.js {{changed}}",
 		"prettier:watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
 		"release": "standard-version"
 	},
