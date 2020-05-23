@@ -31,6 +31,7 @@ module.exports = {
 		'react/destructuring-assignment': 0,
 		'no-underscore-dangle': 0,
 		'new-cap': 0,
-		camelcase: 0
+		camelcase: 0,
+		'arrow-parens': 0
 	}
 };
