@@ -7,7 +7,7 @@ const TEMPLATES = {
 	STYLE: path.join(__dirname, './data/style.scss'),
 };
 
-let scssExtension = '.scss';
+let scssExtension = 'scss';
 
 const getScssFileName = (name) => `${name}.${scssExtension}`;
 
