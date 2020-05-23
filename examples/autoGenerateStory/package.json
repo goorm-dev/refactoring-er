@@ -1,0 +1,11 @@
+{
+  "name": "autogeneratestory",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".refactoring_er.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gihyeon.lee_goorm <gihyeon.lee@goorm.io> (https://goorm.io)",
+  "license": "ISC"
+}
