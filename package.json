@@ -1,8 +1,11 @@
 {
 	"name": "refactoring-er",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Reactoring Tool in goorm",
 	"main": "index.js",
+	"bin": {
+		"refactoring-er": "./index.js"
+	},
 	"scripts": {
 		"test": "jest --coverage",
 		"test:report": "http-server ./reports/coverage",
