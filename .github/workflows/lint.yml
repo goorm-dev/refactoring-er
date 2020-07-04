@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: POST-PR
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  lint:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Runs a single command using the runners shell
+    - name: lint
+      run: npm run lint
+
+    # Runs a set of commands using the runners shell
+    - name: Check Unit Test Coverage
+      run: npm run test
