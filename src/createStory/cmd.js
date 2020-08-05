@@ -1,6 +1,5 @@
 const createStory = require('./createStory.js');
 
-//test
 module.exports = (program, conf) =>
 	program
 		.command('createStory <componentDirPath>')
