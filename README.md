@@ -2,7 +2,7 @@
 
 ## Features
 - 폴더 경로가지고 react 컴포넌트 파일들(index.jsx, <폴더명>.jsx, <폴더명>.scss) 만들어주는 명령어
-- 컴포넌트폴더 Path를 가지고 story북의 story 만들어주는 명령어
+- 컴포넌트폴더 Path를 가지고 story북의 story 만들어주는 명령어. [데모](https://github.com/goorm-dev/refactoring-er/tree/develop/examples/autoGenerateStory)
 
 
 ## Installation
