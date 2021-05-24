@@ -1,7 +1,7 @@
 # refactoring-er
 
-## featrues
-- 폴더 이름가지고 react 컴포넌트 파일들(index.jsx, <폴더명>.jsx, <폴더명>.scss) 만들어주는 명령어
+## Features
+- 폴더 경로가지고 react 컴포넌트 파일들(index.jsx, <폴더명>.jsx, <폴더명>.scss) 만들어주는 명령어
 - 컴포넌트폴더 Path를 가지고 story북의 story 만들어주는 명령어
 
 
@@ -10,12 +10,12 @@
 npm i -g https://github.com/goorm-dev/refactoring-er.git
 ```
 
-## Configuare
+## Configure
 `refactoring_er.config.js`
 ```js
 module.exports = {
-	scssExt: 'module.scss',
-	storiesPath: './src/stories'
+	scssExt: 'module.scss', // scss 확장자(접미어), 기본은 .scss 로 설정됨
+	storiesPath: './src/stories' // stories 경로, 기본은 컴포넌트 폴더 안에 생성됨
 }
 ```
 
