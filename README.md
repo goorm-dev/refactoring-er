@@ -18,8 +18,8 @@ module.exports = {
 
 ### createComponent
 ```shell
-$ refactoring_er createComponent --help
-Usage: refactoring_er createComponent [options] <dirpath>
+$ refactoring-er createComponent --help
+Usage: refactoring-er createComponent [options] <dirpath>
 
 create a component
 
@@ -30,8 +30,8 @@ Options:
 
 ### createStory
 ```shell
-$ refactoring_er createStory --help
-Usage: refactoring_er createStory [options] <componentDirPath>
+$ refactoring-er createStory --help
+Usage: refactoring-er createStory [options] <componentDirPath>
 
 create a story using component path
 
